@@ -1,0 +1,1368 @@
+/* ==========================================================
+   RESET E ESTILOS BASE
+   Garante que o site comece do zero, sem margens padrões,
+   e define as cores e fontes globais.
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Impede que padding/bordas alterem o tamanho total do elemento */
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem (scroll) ser suave ao clicar em links internos */
+}
+
+body {
+    /* Define a lista de fontes modernas do sistema */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0a0a0f; /* Cor de fundo principal: Preto profundo */
+    color: #ffffff;            /* Cor do texto padrão: Branco */
+    min-height: 100vh;
+    overflow-x: hidden;        /* Evita barra de rolagem horizontal indesejada */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Deixa as fontes mais nítidas no Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale;   /* Deixa as fontes mais nítidas no Firefox */
+}
+
+/* ==========================================================
+   TYPOGRAPHY (TIPOGRAFIA)
+   Configura o peso e tamanho de todos os títulos (H1 a H6).
+   ========================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   HEADER (CABEÇALHO)
+   Barra superior fixa com efeito de vidro embaçado.
+   ========================================================== */
+#header {
+    position: fixed; /* Mantém o menu sempre no topo ao rolar */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(10, 10, 15, 0.95); /* Fundo escuro levemente transparente */
+    backdrop-filter: blur(20px);        /* Efeito de desfoque (Blur) no fundo */
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória fina */
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo na esquerda, perfil na direita */
+    padding: 16px 24px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo do botão do Menu Hambúrguer */
+.menu-btn {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05); /* Botão cresce levemente ao passar o mouse */
+}
+
+.menu-btn:active {
+    transform: scale(0.95); /* Botão "encolhe" ao ser clicado */
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+}
+
+.hamburger .line {
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* LOGO - Estilo do ícone colorido e do texto gradiente */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%); /* Gradiente roxo para azul */
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(-5deg) scale(1.05); /* Logo gira levemente no hover */
+}
+
+.logo-icon i {
+    font-size: 22px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
+    -webkit-background-clip: text; /* Faz o gradiente aparecer apenas no texto */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* USER BADGE - Retângulo com informações do usuário */
+.user-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.user-badge:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(168, 85, 247, 0.3); /* Borda fica roxa no hover */
+}
+
+.user-badge i {
+    color: #a855f7;
+    font-size: 16px;
+}
+
+.user-badge span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ==========================================================
+   BUTTONS (BOTÕES)
+   Configurações gerais para botões primários, perigo, etc.
+   ========================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de círculo que expande no fundo do botão ao passar o mouse */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn i {
+    font-size: 16px;
+}
+
+/* Botão principal com gradiente roxo e sombra neon */
+.btn-primary {
+    background: linear-gradient(135deg, #9333ea 0%, #06b6d4 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(147, 51, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px); /* Sobe um pouco no hover */
+    box-shadow: 0 6px 24px rgba(147, 51, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botão vermelho de perigo ou aviso */
+.btn-danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:hover {
+    background: rgba(239, 68, 68, 0.25);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.btn-block {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+}
+
+.btn-link {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    color: #a855f7;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================
+   SIDE MENU (MENU LATERAL)
+   Menu que desliza da lateral esquerda.
+   ========================================================== */
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1e 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+    transform: translateX(-100%); /* Começa fora da tela na esquerda */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilização da barra de rolagem do menu lateral */
+.side-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Classe aplicada via JavaScript para mostrar o menu */
+.side-menu.open {
+    transform: translateX(0);
+}
+
+.side-menu-content {
+    padding: 32px 24px;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-header span {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Botão de fechar (X) do menu lateral */
+.close-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg); /* O ícone gira ao passar o mouse */
+}
+
+.close-btn i {
+    font-size: 18px;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-label {
+    color: #6b7280;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    font-weight: 700;
+}
+
+/* Estilo de cada link/item dentro do menu lateral */
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: transparent;
+    border: none;
+    color: #d1d5db;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Barrinha lateral que aparece no item selecionado/hover */
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #9333ea 0%, #06b6d4 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transform: translateX(4px);
+}
+
+.menu-item.active {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    color: white;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.menu-item.active::before {
+    transform: scaleY(1);
+}
+
+.menu-item i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.menu-item span {
+    flex: 1;
+}
+
+/* GAME DOT - Pontos pulsantes coloridos */
+.game-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.game-dot.red {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+}
+
+.game-dot.blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.game-dot.cyber {
+    background: linear-gradient(135deg, #eab308 0%, #ec4899 100%);
+    box-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+}
+
+/* ==========================================================
+   OVERLAY (FUNDO ESCURO)
+   Escurece o resto da página quando o menu ou modal está aberto.
+   ========================================================== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ==========================================================
+   MODAL (JANELA FLUTUANTE)
+   Estilo das janelas de aviso, login ou formulários.
+   ========================================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal.active .modal-content {
+    animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Barrinha superior brilhante no modal */
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.3) 0%, rgba(6, 182, 212, 0.3) 100%);
+    border-radius: 20px 20px 0 0;
+    z-index: -1;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.modal-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: #d1d5db;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Estilo dos campos de entrada (Input) com ícone na lateral */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #9333ea;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.input-wrapper input:focus + i,
+.input-wrapper:focus-within i {
+    color: #9333ea;
+}
+
+.input-wrapper input::placeholder {
+    color: #6b7280;
+}
+
+.modal-footer {
+    margin-top: 32px;
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================
+   MAIN CONTENT
+   Área central onde fica todo o conteúdo principal do site.
+   ========================================================== */
+#main-content {
+    padding-top: 72px; /* Compensa a altura do header fixo */
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   HERO SECTION (BANNER PRINCIPAL)
+   Seção de destaque com título grande e animação de fundo.
+   ========================================================== */
+.hero-section {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Imagem de fundo com zoom lento e infinito */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(147, 51, 234, 0.15) 0%, rgba(6, 182, 212, 0.15) 50%, #0a0a0f 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 1000px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #c084fc 0%, #ec4899 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    color: #d1d5db;
+    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   FEATURES SECTION (RECURSOS)
+   Cards que mostram as vantagens do seu produto/site.
+   ========================================================== */
+.features-section {
+    padding: 100px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsivo: ajusta colunas sozinho */
+    gap: 40px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.8s ease;
+    animation-fill-mode: both;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Brilho radial que aparece ao passar o mouse sobre o card */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.4s; }
+
+.feature-card:hover {
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+}
+
+.feature-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 36px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Cores específicas para os ícones de features */
+.feature-icon.trophy { background: linear-gradient(135deg, #eab308 0%, #f97316 100%); }
+.feature-icon.target { background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); }
+.feature-icon.users  { background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); }
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.feature-description {
+    color: #9ca3af;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   GAMES SECTION (LISTA DE JOGOS)
+   Grid com cards grandes de jogos e efeitos de zoom.
+   ========================================================== */
+.games-section {
+    padding: 100px 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.game-card {
+    position: relative;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.8s ease;
+    animation-fill-mode: both;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-card:nth-child(2) { animation-delay: 0.15s; }
+.game-card:nth-child(3) { animation-delay: 0.3s; }
+
+.game-card:hover {
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Imagem de fundo do card do jogo */
+.game-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card:hover .game-card-bg {
+    transform: scale(1.15); /* Zoom na imagem quando passa o mouse */
+}
+
+.game-card-overlay {
+    position: absolute;
+    inset: 0;
+    transition: all 0.4s ease;
+}
+
+/* Camadas de cor sobre os jogos (Vermelho, Azul ou Cyber) */
+.game-card-overlay.red {
+    background: linear-gradient(180deg, rgba(153, 27, 27, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.game-card-overlay.blue {
+    background: linear-gradient(180deg, rgba(30, 58, 138, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.game-card-overlay.cyber {
+    background: linear-gradient(180deg, rgba(202, 138, 4, 0.7) 0%, rgba(219, 39, 119, 0.7) 50%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.game-card:hover .game-card-overlay {
+    opacity: 0.85;
+}
+
+.game-card-content {
+    position: absolute;
+    inset: 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.game-genre {
+    color: #d1d5db;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.game-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Botão interno do card de jogo */
+.game-btn {
+    align-self: flex-start;
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.game-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   STATS SECTION (ESTATÍSTICAS)
+   Números e dados em destaque.
+   ========================================================== */
+.stats-section {
+    padding: 100px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.stat-card {
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+    animation-fill-mode: both;
+    padding: 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-4px);
+}
+
+.stat-card:nth-child(2) { animation-delay: 0.1s; }
+.stat-card:nth-child(3) { animation-delay: 0.2s; }
+.stat-card:nth-child(4) { animation-delay: 0.3s; }
+
+.stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stat-icon i {
+    font-size: 28px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.stat-label {
+    color: #9ca3af;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   ANIMATIONS (ANIMAÇÕES GLOBAIS)
+   Keyframes para efeitos de entrada e desfoque.
+   ========================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================================================
+   SEÇÃO DE OFERTAS NUUVEM (ADICIONAL)
+   Cards de produtos com foco em conversão e descontos.
+   ========================================================== */
+.deals-section {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+/* Card especial para ofertas de afiliados */
+.affiliate-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.affiliate-card:hover {
+    transform: translateY(-10px);
+    border-color: #eab308 !important; /* Cor característica da Nuuvem (Amarelo) */
+    background: rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Selo de desconto (Ex: -50%) posicionado no canto do card */
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #eab308;
+    color: #000;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+.affiliate-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.price-old {
+    color: #9ca3af;
+    text-decoration: line-through; /* Texto riscado para preço antigo */
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.price-current {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Botão de compra verde vibrante */
+.btn-buy {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    background: #10b981;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: auto;
+}
+
+.btn-buy:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Temas opcionais para botões de marcas específicas */
+.ps-theme .btn-buy { background: #00439c; }   /* Azul PlayStation */
+.xbox-theme .btn-buy { background: #107c10; } /* Verde Xbox */
+
+/* Responsividade específica para a seção de ofertas */
+@media (max-width: 768px) {
+    .deals-section .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efeito de brilho animado (Shimmer) que passa pelos elementos */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ==========================================================
+   RESPONSIVE (RESPONSIVIDADE GERAL)
+   Ajusta o layout para tablets e celulares.
+   ========================================================== */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* Celulares (Smartphones) */
+@media (max-width: 768px) {
+    .header-content { padding: 12px 16px; }
+    
+    .logo-text { font-size: 18px; }
+    
+    .hero-section { height: 550px; }
+    
+    .features-grid,
+    .games-grid {
+        grid-template-columns: 1fr; /* Força os cards a ocuparem a largura total */
+        gap: 24px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas nos status */
+        gap: 24px;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .features-section,
+    .games-section,
+    .stats-section {
+        padding: 60px 16px;
+    }
+    
+    .page-container {
+        padding: 40px 16px;
+    }
+    
+    .feature-card,
+    .achievement-card,
+    .mission-card {
+        padding: 24px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+    .side-menu { width: 280px; }
+    
+    .modal-content { padding: 28px; }
+    
+    .hero-buttons {
+        flex-direction: column; /* Botões ficam um em cima do outro */
+        width: 100%;
+    }
+    
+    .btn-large { width: 100%; }
+    
+    .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================
+   LOADING STATE (ESTADO DE CARREGAMENTO)
+   Estilo para telas ou ícones de "Carregando".
+   ========================================================== */
+.loading {
+    text-align: center;
+    padding: 120px 24px;
+    color: #9ca3af;
+}
+
+.loading i {
+    font-size: 56px;
+    animation: spin 1s linear infinite; /* Ícone gira sem parar */
+    margin-bottom: 20px;
+    color: #a855f7;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================================
+   UTILITY CLASSES (CLASSES ÚTEIS)
+   Classes rápidas que podem ser usadas em qualquer lugar do HTML.
+   ========================================================== */
+
+/* Aplica o gradiente colorido no texto */
+.text-gradient {
+    background: linear-gradient(135deg, #c084fc 0%, #ec4899 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Aplica desfoque de fundo */
+.backdrop-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+
+/*===================================================================*/
+                    /*     FOOTER    */
+/*===================================================================*/
+
+footer { /* Classe principal do rodapé */
+    display: flex; /* Ativa Flexbox */
+    background: #000; /* Define fundo preto (shorthand) */
+    background-image: initial; /* Remove imagem de fundo herdada */
+    background-color: rgb(0, 0, 0); /* Define fundo preto em RGB */
+    padding-bottom: 28px; /* Espaçamento interno inferior */
+    position: relative; /* Permite posicionamento absoluto dentro dele */
+    align-items: center; /* Centraliza elementos no eixo vertical */
+    justify-content: center; /* Centraliza elementos no eixo horizontal */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    padding-top: 40px; /* Espaçamento interno superior */
+    margin-top: auto; /* Empurra o footer para o final da página quando usando flex no body */
+}
+
+.footer:before { /* Pseudo-elemento criado antes do conteúdo do footer */
+    background: url(/build/images/razor-bottom-black-4930e500.svg) repeat-x top; /* Define imagem repetida horizontalmente no topo */
+    content: ""; /* Necessário para pseudo-elemento aparecer */
+    height: 39px; /* Altura da faixa decorativa */
+    left: 0; /* Alinha à esquerda */
+    position: absolute; /* Posicionamento absoluto dentro do footer */
+    right: 0; /* Estende até a direita */
+    top: -39px; /* Posiciona acima do footer */
+    -webkit-transform: rotate(180deg); /* Rotaciona para compatibilidade com navegadores antigos */
+    transform: rotate(180deg); /* Rotaciona 180 graus */
+}
+
+@media screen and (max-width: 1440px) { /* Aplica regras para telas até 1440px */
+    .footer .content { /* Seleciona área de conteúdo do footer */
+        grid-template-columns: 1fr; /* Define apenas uma coluna (caso esteja usando grid em algum ponto) */
+        justify-items: center; /* Centraliza itens dentro do grid */
+    }
+}
+
+.footer .content { /* Área principal de conteúdo interno do footer */
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Permite quebrar linha se faltar espaço */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 24px; /* Espaçamento interno */
+    gap: 25px; /* Espaço entre os elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.footer .socials { /* Área dos ícones de redes sociais */
+    align-items: center; /* Centraliza verticalmente */
+    color: #cbcbcb; /* Define cor do texto cinza claro */
+    display: flex; /* Usa Flexbox */
+    font-family: BlenderProBold, sans-serif; /* Define fonte personalizada */
+    font-size: 18px; /* Tamanho do texto */
+    font-weight: 700; /* Texto em negrito */
+    text-transform: uppercase; /* Deixa texto em maiúsculo */
+}
+
+@media screen and (max-width: 1440px) { /* Para telas até 1440px */
+    .footer .links { /* Área de links */
+        flex-wrap: wrap; /* Permite quebrar linha */
+        justify-content: center; /* Centraliza os links */
+    }
+}
+
+@media screen and (max-width: 1440px) { /* Para telas até 1440px */
+    .footer .links, .footer hr { /* Seleciona links e linha horizontal */
+        grid-column-end: 2; /* Define final da coluna 2 no grid */
+    }
+}
+
+.footer .links { /* Área de links do footer */
+    display: flex; /* Usa Flexbox */
+    gap: 34px; /* Espaçamento entre links */
+    grid-column-end: 3; /* Finaliza na coluna 3 (caso grid esteja ativo) */
+    grid-column-start: 1; /* Inicia na coluna 1 */
+    justify-content: center; /* Centraliza links */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+
+.footer .socials a { /* Links das redes sociais */
+    background-position: 50%; /* Centraliza imagem de fundo */
+    background-repeat: no-repeat; /* Impede repetição */
+    background-size: 100% 100%; /* Faz imagem ocupar totalmente o botão */
+    display: block; /* Permite definir largura e altura */
+    height: 40px; /* Altura do botão */
+    margin-left: 12px; /* Espaço à esquerda */
+    width: 40px; /* Largura do botão */
+}
+
+a { /* Todos os links do site */
+    background-color: initial; /* Remove qualquer cor de fundo herdada */
+}

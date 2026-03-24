@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<video autoplay muted loop id="video-neve">
+  <source src="IMG/videoNeveCaindo.mp4" type="video/mp4">
+  Seu navegador não suporta vídeos.
+</video>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleGOW.css">
+     <link rel="icon" type="image/png" sizes="32x32"
+        href="IMG/IconGow-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="entrar-site">
+        <div class="conteudo-entrada">
+            <button id="btn-iniciar" class="frase-nordica">Iniciar Experiência</button>
+        </div>
+    </div>
+
+    <div id="splash-container">
+    <div id="splash-black-bg"></div>
+
+    <div class="axe-wrapper">
+        <img src="IMG/machadokratos.png" class="kratos-axe" id="leviatan-axe" alt="Machado">
+    </div>
+    <img src="IMG/Rachadura.png" class="screen-crack" id="glass-crack" alt="Rachadura">
+</div>
+
+
+       <header>
+        <div class="LogoGOW">
+            <img src="IMG/LogoGOW.png" alt="God of War Ragnarök">
+        </div>
+
+            <div class="menu-btn" id="menuBtn">
+            
+        </div>
+
+        <div class="MNav">
+            <a href="../index2.html">Inicio</a>
+            <a href="#btn-abrir" onclick="abrirPopup()"> Trailer</a>
+            <a href="#conquistas">Conquistas</a>  
+            <a href="#missoes">Missões</a>
+            <a href="sobre.html">Sobre O Jogo</a>
+        </div>
+
+
+    </header> 
+
+<button class="btn-abrir" onclick="abrirPopup()">Abrir Popup</button>
+
+<div id="popup" class="popup-overlay">
+    <div class="popup-box">
+        <span class="fechar" onclick="fecharPopup()">×</span>
+
+         <div class="popup-content">
+            <iframe id="video-frame"
+                src=""
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tituloC">
+   <h1 class="titulo frase-nordica"><span class="iniciais">E</span>nfrente a Fúria do <span class="iniciais">R</span>agnarok, a <span class="iniciais">V</span>ingança Nordica o aguarda.</h1>
+    <p class="tituloP">
+        Junte-se à maior comunidade gamer. Complete missões exclusivas, desbloqueie conquistas e compartilhe suas vitórias.
+    </p>
+</div>
+
+<div class="tituloD">
+<img src="IMG/simboloGOW-removebg-preview.png" alt="Imagem Flutuante" class="imagem-flutuante">
+
+<script src="script.js"></script>
+</div>
+
+
+
+
+
+
+
+<section class="conquistas-container" id="conquistas">
+    <h2 class="frase-nordica titulo-secao">🏆 Conquistas de Midgard e Além ⚔️</h2>
+
+    <div class="conquista-card platina">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaPaieFilho.jpg" alt="Ícone Platina">
+        </div>
+        <div class="conquista-info">
+            <h3>Pai e Filho</h3>
+            <p class="descricao">Colecione todos os outros troféus de God of War Ragnarök.</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conquista-card bronze">
+        <div class="conquista-icone">
+            <img src="IMG/conoquistaUrsoeLobo.jpg" alt="Ícone Bronze">
+        </div>
+        <div class="conquista-info">
+            <h3>O Urso e o Lobo</h3>
+            <p class="descricao">Inicie a primeira caçada (Conquista de História).</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="conquista-card prata">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaTrabalhoemProgesso.jpg" alt="Ícone Prata">
+        </div>
+        <div class="conquista-info">
+            <h3>Trabalho em Progresso</h3>
+            <p class="descricao">Crie todos os conjuntos de armadura para Kratos.</p>
+            <div class="progresso-barra">
+                <div class="progresso-preenchimento" style="width: 70%;">70% Concluído</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conquista-card prata">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaEmBUscadeFavores.webp" alt="Ícone Prata">
+        </div>
+        <div class="conquista-info">
+            <h3>Em Busca de Favores</h3>
+            <p class="descricao">Conclua 10 Favores (Missões Secundárias).</p>
+            <div class="progresso-barra">
+                <div class="progresso-preenchimento" style="width: 80%;">80% (8/10)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conquista-card bronze">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaALendaseCumpriu.webp" alt="Ícone Bronze">
+        </div>
+        <div class="conquista-info">
+            <h3>A Lenda se Cumpriu</h3>
+            <p class="descricao">Derrote um Berserker (Mini-Chefe).</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="conquista-card ouro">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaNovoDespertar.jpeg" alt="Ícone Ouro">
+        </div>
+        <div class="conquista-info">
+            <h3>O Novo Despertar</h3>
+            <p class="descricao">Complete o jogo na dificuldade "Não Dificulte" ou superior.</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="conquista-card bronze">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaColetorArtefatos.jpg" alt="Ícone Bronze">
+        </div>
+        <div class="conquista-info">
+            <h3>Coletor de Artefatos</h3>
+            <p class="descricao">Encontre a metade dos Artefatos de Svartalfheim.</p>
+            <div class="progresso-barra">
+                <div class="progresso-preenchimento" style="width: 40%;">40% Coletado</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conquista-card prata">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaMestredaForja.jpg" alt="Ícone Prata">
+        </div>
+        <div class="conquista-info">
+            <h3>Mestre da Forja</h3>
+            <p class="descricao">Aprimore uma peça de armadura até o nível 9.</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conquista-card ouro">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaDefensorReinos.webp" alt="Ícone Ouro">
+        </div>
+        <div class="conquista-info">
+            <h3>Defensor dos Reinos</h3>
+            <p class="descricao">Complete a Prova Final de Muspelheim.</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="conquista-card bronze">
+        <div class="conquista-icone">
+            <img src="IMG/conquistaBau.jpg" alt="Ícone Bronze">
+        </div>
+        <div class="conquista-info">
+            <h3>Primeiro Tesouro</h3>
+            <p class="descricao">Abra seu primeiro Baú Nornir.</p>
+            <div class="progresso-barra completa">
+                <div class="progresso-preenchimento" style="width: 100%;">100% Obtida</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</section> 
+
+
+
+
+
+
+
+
+
+
+
+<section class="missoes-container" id="missoes">
+    <h2 class="frase-nordica titulo-arvore">🌳 Árvore de Missões de Yggdrasil 🌳</h2>
+
+    <div class="arvore-missao-visual">
+        <div class="missao-card pos-tronco-principal progresso">
+            <h4>O Chamado da Profecia</h4>
+            <p>O primeiro confronto em Midgard.</p>
+            <span class="status progresso">Em Andamento (50%)</span>
+        </div>
+        
+        <div class="missao-card pos-galho-e-superior completo">
+            <h4>A Busca por Tyr</h4>
+            <p>Viagem inicial para Svartalfheim.</p>
+            <span class="status concluida">Concluída</span>
+        </div>
+        
+        <div class="missao-card pos-galho-d-superior pendente">
+            <h4>O Ragnarök Final</h4>
+            <p>O Confronto Final dos Nove Reinos.</p>
+            <span class="status pendente">Pendente</span>
+        </div>
+        
+        <div class="missao-card pos-galho-central completo">
+            <h4>A Vingança de Freya</h4>
+            <p>Confronto com a bruxa. (Capítulo 5)</p>
+            <span class="status concluida">Concluída</span>
+        </div>
+        
+        <div class="missao-card pos-galho-e-inferior progresso">
+            <h4>Favores de Brok</h4>
+            <p>Ajude Brok na busca por materiais.</p>
+            <span class="status progresso">Em Andamento (2/4)</span>
+        </div>
+
+        <div class="missao-card pos-galho-d-inferior pendente">
+            <h4>A Prisão dos Gigantes</h4>
+            <p>Investigue a Prisão. (Pós-jogo)</p>
+            <span class="status pendente">Pendente</span>
+        </div>
+
+    </div>
+</section>
+
+
+
+<footer>
+  <div class="textofinal">
+    <p>Não nos responsabilizamos, expressa ou implicitamente, por quaisquer problemas entre indivíduos ou grupos que utilizem este serviço.
+        A publicação, visualização, envio e recebimento de dados são de responsabilidade exclusiva de cada usuário.
+        “PlayStation Family Mark”, “PlayStation”, “logotipo do PS5” e “PS5” são marcas registradas ou marcas comerciais da Sony Interactive Entertainment Inc.
+         "PlayStation"、"" e ""São marcas registradas da Sony Interactive Entertainment Inc."" e "" são marcas registradas da mesma empresa.
+         Nintendo Switch™ e o logotipo do Nintendo Switch são marcas registradas da Nintendo.
+         O logotipo do Steam é uma marca comercial e/ou marca registrada da Valve Corporation nos EUA e/ou em outros países.
+         Design da fonte por Fontworks Inc.</p>
+    </div>
+
+</footer>
+  
+ 
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

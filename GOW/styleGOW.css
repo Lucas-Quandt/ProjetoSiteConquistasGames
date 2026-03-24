@@ -1,0 +1,822 @@
+body {
+    background-color: rgba(29, 25, 25, 0.753);
+    margin: 0;
+    font-family: Arial, sans-serif;
+     background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* TRANSPARÊNCIA */
+        url('IMG/GOWbackground.jpg');
+    background-size: cover;      /* cobre a tela inteira */
+    background-position: center; /* centraliza */
+    background-attachment: fixed;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("IMG/tema\ do\ site.jpg") center/cover no-repeat;
+    opacity: 0.1;   /* ajuste a transparência */
+    z-index: -1;    /* mantém atrás de tudo */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 40px;
+
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        #b0b0b0 50%,
+        #637eeb 70%,
+        #0946b7 80%,
+        #04348e 100%
+    );
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.LogoGOW img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+
+.MNav {
+    display: flex;
+    gap: 30px;
+}
+
+.MNav a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.MNav a:hover {
+    color: #0c3e78;
+    text-shadow: 0 0 8px rgba(194, 191, 191, 0.979);
+}
+
+
+/* popup */
+
+.btn-abrir {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #0e44b8, #0059ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(28, 71, 212, 0.6);
+    transition: 0.3s;
+    display: none;
+}
+
+.btn-abrir:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgb(0, 38, 255);
+}
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.popup-box {
+    position: relative;
+    width: 600px;
+    padding: 20px;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(4, 0, 255, 0.5);
+}
+
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(0, 47, 255);
+    text-shadow: 0 0 10px rgb(0, 4, 255);
+}
+
+
+
+.popup-content iframe {
+    width: 100%;
+    height: 330px;
+    border-radius: 10px;
+}
+
+
+/* texto do sobre */
+
+/* página principal */
+
+.tituloC{
+    margin-top: 100px;
+    margin-bottom: 60px;
+    border: solid 1px white;
+    padding:40px;
+    background-color: #2a66d533;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.titulo{
+   color:#fff;
+    font-size: 55px;
+    width: 60%;
+    margin-left: 250px;
+    margin-top: 100px;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgb(36, 34, 34), 2px 2px 5px black;
+    letter-spacing: 2px;
+
+}
+
+.tituloP{
+    color: #fff;
+    width: 40%;
+    margin-left: 350px;
+   
+}
+
+
+.iniciais{
+    color:#0946b7 ;
+    font-family: Broken-Detroit;
+
+}
+
+.textofinal{
+    color: white;
+    box-shadow: #00000077;
+    background-color: #000000;
+    font-size: small;
+}
+
+@font-face {
+    font-family: 'Broken-Detroit';
+    src: url('fonts/Broken-Detroit\ -\ PERSONAL\ USE\ ONLY.ttf') format('truetype');
+}
+
+.imagem-flutuante {
+    /* 1. Remove o posicionamento fixo/absoluto. Ela volta a rolar com a página */
+    position: static; /* Isso é o padrão, mas ajuda a garantir */
+    
+    /* 2. Define o tamanho grande */
+    width: 1200px; /* Ajuste este valor se quiser que ela fique maior ou menor */
+    height: auto;
+    
+    /* 3. Necessário para centralizar a imagem (elemento inline) */
+    display: block; 
+    
+    /* 4. Centralização Horizontal */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* 5. Espaçamento vertical (Opcional, para separar do texto acima) */
+    margin-top: 10px; 
+    margin-bottom: 50px;
+
+    /* 6. Z-index não é mais necessário, pois ela está no fluxo normal */
+}
+
+.tituloD{
+    /* Mantendo seus estilos existentes para .tituloD, mas garantindo a largura total */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura para a centralização funcionar */
+    /* ... (outros estilos existentes do .tituloD) ... */
+}
+
+.logoPlaystationSteam img{
+    width: 17%;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: static; 
+    display: block; 
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================================================= */
+/* ESTILOS PARA A FRASE NÓRDICA (GOW STYLE) */
+/* ======================================================= */
+
+.frase-nordica {
+
+    font-family: 'Cinzel', serif; 
+    color: #f7f7f7; 
+    font-size: 28px; 
+    font-weight: 700; 
+    
+   
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    
+    /* Efeito de Text Shadow (Brilho e Contraste) */
+    text-shadow: 
+        0 0 5px #ffcc00, 
+        0 0 10px #aa7700, 
+        0 0 20px rgba(255, 255, 255, 0.4); 
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* página do sobre o jogo */
+
+.sobre{
+
+    color:#fff;
+    width: 70%;
+    margin:0 auto;
+    margin-top: 260px;
+    text-align: justify;
+    padding: 50px;
+}
+
+.enredo{
+    color:#fff;
+    width: 70%;
+    text-align: justify;
+    margin:0 auto;
+
+}
+
+
+
+
+
+/* video 01 */
+
+.video-container {
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.video-container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+#video2 {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+/* ======================================================= */
+/* ESTILOS DA SEÇÃO DE CONQUISTAS */
+/* ======================================================= */
+
+.conquistas-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ebebeb7e; 
+    border: 3px solid #1d57d3; 
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.9),
+        inset 0 0 15px rgba(255, 204, 0, 0.1);
+    border-radius: 4px;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: #0f35dd; 
+    font-size: 38px;
+    margin-bottom: 50px;
+    font-family: 'Cinzel', serif;
+    text-shadow: 
+        0 0 8px #000000, 
+        0 0 15px rgba(255, 255, 255, 0.4); 
+    letter-spacing: 2px;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: #1757e2; 
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #ffffff; 
+}
+
+
+
+/* Card Individual da Conquista */
+.conquista-card {
+    display: flex;
+    align-items: center;
+    background-color: #c5c5c5;
+    margin-bottom: 25px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border-top: 2px solid #000000; 
+    border-bottom: 2px solid #000000;
+
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.conquista-card:hover {
+    border-radius: 8px;
+    transform: translateY(-5px); 
+    background-color: #2160e7a2; 
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.9), 0 0 10px #ffcc0040;
+}
+
+/* Cores de Borda por Rarity (Conquista obtida) */
+.conquista-card.platina { border-left: 6px solid #e5e4e2; } 
+.conquista-card.ouro { border-left: 6px solid #ffd700; } 
+.conquista-card.prata { border-left: 6px solid #c0c0c0; } 
+.conquista-card.bronze { border-left: 6px solid #cd7f32; } 
+.conquista-card.completa { opacity: 1; }
+
+.conquista-icone img {
+    border-radius: 8px;
+    width: 300px; 
+    height: 200px;
+    margin-right: 20px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.conquista-info {
+    flex-grow: 1;
+    color: #000000;
+}
+
+.conquista-info h3 {
+    margin: 0 0 5px 0;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+.conquista-info .descricao {
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+
+/* Estilos da Barra de Progresso */
+.progresso-barra {
+    margin-top: 10px;
+    background-color: #444; 
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.progresso-preenchimento {
+    height: 100%;
+    background: linear-gradient(to right, #aa7700, #ffd700); 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #111; 
+    font-weight: bold;
+    font-size: 12px;
+    transition: width 1s ease-in-out; 
+}
+
+/* Estilo especial para conquistas 100% completas */
+.progresso-barra.completa .progresso-preenchimento {
+    background: linear-gradient(to right, #aa7700, #ffd700); /* Azul GOW para completo */
+    color: rgb(8, 8, 8);
+}
+
+
+#video-neve {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir a tela sem esticar */
+    z-index: -1;       /* Coloca o vídeo atrás do conteúdo (mas acima do background do body) */
+    pointer-events: none; /* Garante que você consiga clicar nos botões por "trás" do vídeo */
+    opacity: 0.5;      /* Ajuste aqui se quiser a neve mais forte ou mais suave */
+    mix-blend-mode: screen; /* DICA DE OURO: Remove o fundo preto do vídeo e deixa só a neve branca */
+}
+
+
+
+
+
+
+/* ======================================================= */
+/* ESTILOS DA ÁRVORE DE MISSÕES (YGGDRASIL) */
+/* ======================================================= */
+
+.missoes-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px 20px;
+    background-color: #0d0d0d; 
+    border: 3px solid #6b5a32; 
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.titulo-arvore {
+    text-align: center;
+    color: #ffcc00; 
+    font-size: 38px;
+    margin-bottom: 60px;
+    text-shadow: 0 0 10px #aa7700;
+}
+
+.arvore-missoes {
+    position: relative;
+    padding: 20px;
+}
+
+
+
+
+
+/* -------------------------------------- */
+/* ESTILO GERAL DOS NÓS (MISSÕES) */
+/* -------------------------------------- */
+.no-missao {
+    background-color: #2e2e2e;
+    border: 2px solid #6b5a32;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 40px; 
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    color: #f7f7f7;
+}
+
+.no-missao:hover {
+    background-color: #3e3e3e;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #ffcc0060;
+}
+
+.no-missao h4 {
+    font-family: 'Cinzel', serif;
+    color: #ffcc00;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.no-missao p {
+    color: #b0b0b0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status.concluida {
+    background-color: #04348e;
+    color: white;
+}
+
+.status.progresso {
+    background-color: #ffcc00;
+    color: #111;
+}
+
+.status.pendente {
+    background-color: #7b0000;
+    color: white;
+}
+
+
+
+
+
+/* -------------------------------------- */
+/* ESTRUTURA E LINHAS DA ÁRVORE */
+/* -------------------------------------- */
+
+/* Estilo para a linha (tronco) que conecta um nó ao próximo */
+.no-missao::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px; 
+    background-color: #aa7700; 
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px; 
+    z-index: -1;
+}
+
+
+.arvore-missoes > .no-missao:last-child::after {
+    content: none;
+}
+
+/*=================================================================*/
+
+#splash-container {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+#splash-black-bg {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    z-index: 9998;
+    transition: opacity 0.5s ease-out; /* Sumirá rápido no impacto */
+}
+
+.axe-wrapper {
+    position: absolute;
+    left: -600px;
+    top: 60%; /* Sua altura preferida */
+    transform: translateY(-50%);
+    z-index: 10001;
+}
+
+/* Classe de animação disparada pelo JS */
+.animate-axe-move {
+    animation: moveAxe 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.1) forwards;
+}
+
+@keyframes moveAxe {
+    0% { left: -600px; }
+    100% { left: 48%; transform: translate(-49%, -49%);
+    top: 73%; }
+}
+
+.kratos-axe {
+    width: 400px;
+    filter: drop-shadow(0 0 20px #06b6d4);
+    animation: spinAxe 0.15s linear infinite;
+}
+
+@keyframes spinAxe {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.stop-spin {
+    animation-play-state: paused !important;
+    transform: rotate(60deg) !important; /* Ângulo da fincada */
+}
+
+.screen-crack {
+    position: absolute;
+    width: 750px;
+    left: 50%;
+    top: 60%; /* Mesma altura do machado */
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+    z-index: 9999;
+}
+
+.crack-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+/* Efeito de Tremer a tela */
+.shake-active {
+    animation: shakeEffect 0.2s infinite;
+}
+
+@keyframes shakeEffect {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(8px, 8px); }
+    100% { transform: translate(-8px, -8px); }
+}
+
+/*===============================================================*/
+ /*tela para a tivar audio */
+
+ /* Tela de Entrada para liberar o áudio */
+#entrar-site {
+    position: fixed;
+    inset: 0;
+    background: #000 url('IMG/GOWbackground.jpg') center/cover;
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#entrar-site::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.conteudo-entrada {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-entrada {
+    width: 300px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+#btn-iniciar {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #0e44b8;
+    padding: 15px 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+#btn-iniciar:hover {
+    background: #0e44b8;
+    box-shadow: 0 0 20px #0e44b8;
+    transform: scale(1.1);
+}
+
+
+
+
+/* ======================================================= */
+/* ESTILOS DA ÁRVORE DE MISSÕES (YGGDRASIL VISUAL) */
+/* ======================================================= */
+
+.missoes-container {
+    max-width: 1300px; 
+    margin: 80px auto;
+    padding: 30px 0;
+    background-color: #0d0d0d77;
+    border: 3px solid #6b5a32;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.37);
+}
+
+.titulo-arvore {
+    margin-bottom: 20px;
+}
+
+.arvore-missao-visual {
+    position: relative;
+    background: url('IMG/arvoreigdrasill.png') no-repeat center center; 
+    background-size: contain; 
+    width: 100%; 
+    height: 1500px; 
+    margin: 0 auto;
+}
+
+/* Estilo Básico do Card de Missão */
+.missao-card {
+    position: absolute; 
+    width: 200px; 
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 10; 
+    
+    /* Estilo GOW/Nórdico */
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid #aa7700;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.missao-card:hover {
+    box-shadow: 0 0 15px #ffcc00;
+    transform: scale(1.05);
+}
+
+.missao-card h4 {
+    font-family: 'Cinzel', serif;
+    color: #ffcc00;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.missao-card p {
+    color: #c0c0c0;
+    margin: 0;
+    font-size: 12px;
+}
+
+
+
+
+/* -------------------------------------- */
+/* POSICIONAMENTO ABSOLUTO DOS CARDS */
+/* -------------------------------------- */
+
+.pos-tronco-principal {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.pos-galho-e-superior {
+    top: 30%;
+    left: 20%;
+}
+
+.pos-galho-d-superior {
+    top: 25%;
+    right: 15%;
+}
+
+.pos-galho-central {
+    top: 45%;
+    right: 10%;
+}
+
+.pos-galho-e-inferior {
+    top: 40%;
+    left: 10%;
+}
+
+.pos-galho-d-inferior {
+    top: 35%;
+    right: 25%;
+}
+
+
+
+
+
+
+
+
+
+

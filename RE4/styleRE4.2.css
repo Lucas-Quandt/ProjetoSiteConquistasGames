@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #f2f2f2;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ==============================
+SECTION PRINCIPAL
+============================== */
+section.missoes {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 40px;
+}
+
+section.missoes h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c62828;
+  text-shadow: 0 0 10px rgba(198, 40, 40, 0.6);
+}
+
+/* ==============================
+BLOCOS (DIÁRIA / SEMANAL / MENSAL)
+============================== */
+.bloco {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+
+}
+
+.bloco h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #e53935;
+  border-left: 5px solid #e53935;
+  padding-left: 15px;
+  text-transform: uppercase;
+ 
+}
+
+/* ==============================
+LISTAS DE MISSÕES
+============================== */
+ul {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 14px 18px;
+  border-radius: 10px;
+  display: grid;
+  gap: 6px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+li strong {
+  color: #ff5252;
+  font-size: 1.05rem;
+}
+
+/* ==============================
+TEXTO DA MISSÃO
+============================== */
+li span:not(.finalizado) {
+  font-size: 0.95rem;
+  color: #ccc;
+  padding-right: 80px; /* espaço para o ícone */
+}
+
+
+span.finalizado {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  width: 62px;
+  height: 34px;
+  background-image: url("IMG/não foi feito ainda.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+}
+
+
+
+@media (max-width: 768px) {
+  section.missoes h1 {
+    font-size: 2rem;
+  }
+
+  .bloco h2 {
+    font-size: 1.5rem;
+  }
+
+  li span:not(.finalizado) {
+    padding-right: 0;
+  }
+
+  span.finalizado {
+    position: static;
+    margin-top: 8px;
+  }
+}
+
+.tpmTotal{
+    display: flex;
+}
+
+.quadroDeMissoes{
+    background-image: url('IMG/tempo\ de\ jogo\ total.jpg');
+    background-size: cover;
+    color: #fff; 
+    border-radius: 10px;
+    margin-top: 260px;
+
+}
+
+.proveai{
+    display: flex;
+    margin: 80px auto;
+    width: 1200px;
+    height: 600px;
+    justify-content: center;
+}
+

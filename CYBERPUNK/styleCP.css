@@ -1,0 +1,545 @@
+:root { /* Define variáveis globais reutilizáveis */
+    --cor-fundo: #000; /* Cor de fundo principal do site */
+    --cor-amarelo-cyber: #fcee0a; /* Amarelo estilo Cyberpunk */
+    --cor-azul-neon: #00f0ff; /* Azul neon vibrante */
+    --cor-vermelho-neon: #ff003c; /* Vermelho neon vibrante */
+    --cor-texto: #fff; /* Cor padrão dos textos */
+    --fonte-padrao: Arial, sans-serif; /* Fonte padrão do site */
+    --fonte-titulo: 'CyberFont', Arial, sans-serif; /* Fonte usada nos títulos */
+}
+
+@font-face { /* Importa uma fonte personalizada */
+    font-family: 'CyberFont'; /* Nome que será usado no CSS */
+    src: url('fonte/refinery-25-bold.ttf') format('truetype'); /* Caminho do arquivo da fonte */
+    font-weight: normal; /* Peso padrão da fonte */
+    font-style: normal; /* Estilo padrão (não itálico) */
+}
+
+html { /* Configurações globais da página */
+    scroll-behavior: smooth; /* Ativa rolagem suave ao clicar em âncoras */
+}
+
+body { /* Estrutura principal da página */
+    margin: 0; /* Remove margem padrão do navegador */
+    font-family: var(--fonte-padrao); /* Define fonte padrão */
+    background-color: var(--cor-fundo); /* Define fundo principal */
+    color: var(--cor-texto); /* Define cor do texto */
+    margin-top: 80px; /* Compensa o header fixo */
+    min-height: 100vh; /* Garante altura mínima da tela */
+    width: 100%; /* Ocupa largura total */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+}
+
+body::before { /* Camada de fundo com imagem */
+    content: ""; /* Cria pseudo-elemento */
+    position: fixed; /* Fixa no fundo da tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa largura total */
+    height: 100%; /* Ocupa altura total */
+    background: url("img/background.jpg") center/cover no-repeat; /* Define imagem de fundo */
+    opacity: 0.3; /* Define transparência */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+main { /* Área principal da página */
+    flex: 1; /* Faz ocupar espaço restante disponível */
+}
+
+/* =========================================================
+   HEADER FIXO SUPERIOR
+   ========================================================= */
+
+header { /* Estiliza o cabeçalho fixo do site */
+    display: flex; /* Ativa flexbox para organizar os elementos internos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaça elementos nas extremidades */
+    height: 80px; /* Define altura fixa do header */
+    padding: 0 30px; /* Espaçamento interno horizontal */
+    background: linear-gradient(90deg, #000000 0%, #103298 100%); /* Fundo em degradê */
+    border-bottom: 2px solid var(--cor-amarelo-cyber); /* Linha inferior amarela */
+    position: fixed; /* Fixa no topo da tela */
+    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    width: 98%; /* Define largura do header */
+    top: 0; /* Posiciona no topo da página */
+}
+
+
+/* =========================================================
+   LOGO CENTRAL
+   ========================================================= */
+
+.logo-central img { /* Estiliza a imagem da logo */
+    height: 50px; /* Define altura da logo */
+}
+
+
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+   ========================================================= */
+
+.menu-navegacao { /* Container que agrupa os links do menu */
+    display: flex; /* Organiza links horizontalmente */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.menu-navegacao a { /* Estiliza cada link do menu */
+    color: var(--cor-texto); /* Cor padrão do texto */
+    font-family: var(--fonte-titulo); /* Usa fonte personalizada */
+    font-size: 18px; /* Tamanho da fonte */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: bold; /* Deixa texto em negrito */
+    text-transform: uppercase; /* Transforma texto em maiúsculo */
+    transition: 0.2s; /* Suaviza animações */
+    border: 1px solid transparent; /* Cria borda invisível inicial */
+    padding: 5px 10px; /* Espaçamento interno do link */
+}
+
+.menu-navegacao a:hover { /* Efeito ao passar o mouse */
+    color: var(--cor-amarelo-cyber); /* Muda cor do texto */
+    border: 1px solid var(--cor-amarelo-cyber); /* Mostra borda amarela */
+    background: rgba(252, 238, 10, 0.1); /* Fundo amarelo translúcido */
+}
+
+/* =========================================================
+   SEÇÕES DE CONTEÚDO
+   ========================================================= */
+
+.secao-conteudo { /* Define padrão visual das seções principais */
+    padding: 60px 20px; /* Espaçamento interno vertical e horizontal */
+    background-color: rgba(5, 5, 5, 0.9); /* Fundo escuro semi-transparente */
+    border-top: 1px solid #333; /* Linha superior separadora */
+}
+
+.fundo-alternado { /* Fundo alternativo para diferenciar seções */
+    background-color: rgba(15, 10, 10, 0.95); /* Tom levemente diferente */
+}
+
+
+/* =========================================================
+   CABEÇALHO DAS SEÇÕES
+   ========================================================= */
+
+.cabecalho-secao { /* Container do título da seção */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 50px; /* Espaço abaixo do cabeçalho */
+}
+
+.cabecalho-secao h2 { /* Título principal da seção */
+    font-size: 36px; /* Tamanho grande para destaque */
+    color: var(--cor-azul-neon); /* Azul neon */
+    text-transform: uppercase; /* Texto em maiúsculo */
+    margin: 0; /* Remove margem padrão */
+}
+
+.subtitulo { /* Texto secundário abaixo do título */
+    color: #888; /* Cinza neutro */
+    margin-top: 5px; /* Pequeno espaçamento superior */
+}
+
+
+/* =========================================================
+   GRID RESPONSIVO
+   ========================================================= */
+
+.container-grid { /* Container que organiza os cards */
+    display: grid; /* Ativa CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas automáticas responsivas */
+    gap: 30px; /* Espaçamento entre cards */
+    max-width: 1200px; /* Limita largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+   ========================================================= */
+
+.card-cyber { /* Estrutura base de cada card */
+    background: #151515; /* Fundo do card */
+    border: 1px solid #333; /* Borda padrão */
+    position: relative; /* Permite posicionamento interno absoluto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza animações */
+    display: flex; /* Ativa flexbox interno */
+    flex-direction: column; /* Organiza conteúdo verticalmente */
+}
+
+.card-cyber.conquista { /* Card do tipo conquista */
+    border-bottom: 3px solid var(--cor-azul-neon); /* Destaque azul inferior */
+}
+
+.card-cyber.missao { /* Card do tipo missão */
+    border-bottom: 3px solid var(--cor-vermelho-neon); /* Destaque vermelho inferior */
+}
+
+.card-cyber:hover { /* Efeito ao passar o mouse */
+    transform: translateY(-5px); /* Move levemente para cima */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Cria sombra de profundidade */
+    border-color: var(--cor-texto); /* Destaca borda */
+}
+
+
+/* =========================================================
+   IMAGEM DO CARD
+   ========================================================= */
+
+.card-imagem { /* Container da imagem */
+    width: 100%; /* Ocupa largura total */
+    height: 200px; /* Altura fixa */
+    overflow: hidden; /* Esconde excesso da imagem */
+    position: relative; /* Permite posicionamento interno */
+}
+
+.card-imagem img { /* Imagem interna */
+    width: 100%; /* Ocupa largura total */
+    height: 100%; /* Ocupa altura total */
+    object-fit: cover; /* Preenche sem distorcer */
+    transition: 0.5s; /* Suaviza animação */
+}
+
+.card-cyber:hover .card-imagem img { /* Efeito hover na imagem */
+    transform: scale(1.1); /* Zoom suave */
+}
+
+
+/* =========================================================
+   TAG DO TIPO
+   ========================================================= */
+
+.tag-tipo { /* Pequena etiqueta no canto da imagem */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    background: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 3px 8px; /* Espaçamento interno */
+    font-size: 10px; /* Texto pequeno */
+    font-weight: bold; /* Negrito */
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO CARD
+   ========================================================= */
+
+.card-info { /* Área de texto do card */
+    padding: 20px; /* Espaçamento interno */
+    flex-grow: 1; /* Ocupa espaço disponível */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza verticalmente */
+    justify-content: space-between; /* Distribui conteúdo */
+}
+
+.card-info h3 { /* Título do card */
+    margin: 0 0 10px; /* Remove margem superior e adiciona inferior */
+    color: var(--cor-amarelo-cyber); /* Amarelo cyber */
+    text-transform: uppercase; /* Maiúsculo */
+}
+
+.card-info p { /* Parágrafo descritivo */
+    color: #aaa; /* Cinza claro */
+    font-size: 14px; /* Tamanho reduzido */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+
+/* =========================================================
+   BARRA DE PROGRESSO (Conquista)
+   ========================================================= */
+
+.barra-progresso { /* Fundo da barra */
+    width: 100%; /* Largura total */
+    height: 4px; /* Altura fina */
+    background: #333; /* Fundo escuro */
+}
+
+.preenchimento { /* Parte preenchida da barra */
+    height: 100%; /* Ocupa altura total da barra */
+    background: var(--cor-azul-neon); /* Azul neon */
+    box-shadow: 0 0 10px var(--cor-azul-neon); /* Efeito brilho */
+}
+
+
+/* =========================================================
+   BOTÃO DO CARD (Missão)
+   ========================================================= */
+
+.btn-card { /* Botão dentro do card */
+    width: 100%; /* Ocupa largura total */
+    padding: 10px; /* Espaçamento interno */
+    background: transparent; /* Fundo transparente */
+    border: 1px solid var(--cor-vermelho-neon); /* Borda vermelha */
+    color: var(--cor-vermelho-neon); /* Texto vermelho */
+    cursor: pointer; /* Cursor de clique */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Maiúsculo */
+    transition: 0.3s; /* Animação suave */
+}
+
+.btn-card:hover { /* Efeito ao passar o mouse */
+    background: var(--cor-vermelho-neon); /* Fundo vermelho */
+    color: #fff; /* Texto branco */
+}
+
+/* =========================================================
+   HERO SECTION (Seção principal de destaque)
+   ========================================================= */
+
+.secao-hero { /* Container principal da seção hero */
+    height: 80vh; /* Ocupa 80% da altura da tela */
+    display: flex; /* Ativa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza texto */
+    flex-direction: column; /* Organiza elementos em coluna */
+    margin: 100px 0px 100px 0px; /* Espaçamento externo superior e inferior */
+}
+
+.conteudo-hero { /* Caixa interna do hero */
+    background: rgba(0, 0, 0, 0.441); /* Fundo preto semi-transparente */
+    padding: 40px; /* Espaçamento interno */
+    border: 1px solid var(--cor-azul-neon); /* Borda azul neon */
+    max-width: 800px; /* Limita largura máxima */
+}
+
+.titulo-principal { /* Título principal da página */
+    font-family: var(--fonte-titulo); /* Usa fonte personalizada */
+    font-size: 60px; /* Tamanho grande */
+    text-transform: uppercase; /* Texto em maiúsculo */
+    color: var(--cor-amarelo-cyber); /* Amarelo destaque */
+}
+
+.titulo-glitch {
+    font-family: var(--fonte-titulo);
+}
+
+
+/* =========================================================
+   BOTÃO DE DESTAQUE (Estilo Cyberpunk)
+   ========================================================= */
+
+.botao-destaque { /* Botão principal do hero */
+    padding: 15px 30px; /* Espaçamento interno */
+    background-color: var(--cor-amarelo-cyber); /* Fundo amarelo */
+    color: rgb(0, 0, 0); /* Texto preto */
+    border: none; /* Remove borda padrão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de clique */
+    text-transform: uppercase; /* Texto em maiúsculo */
+    clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%); /* Recorte com formato futurista */
+    transition: 0.3s; /* Suaviza animações */
+}
+
+.botao-destaque:hover { /* Efeito ao passar o mouse */
+    background-color: var(--cor-azul-neon); /* Troca para azul neon */
+    transform: scale(1.05); /* Aumenta levemente o tamanho */
+}
+
+
+/* =========================================================
+   POPUP / OVERLAY (Tela escura de fundo)
+   ========================================================= */
+
+.overlay-popup { /* Camada escura que cobre a tela */
+    position: fixed; /* Fixa na tela */
+    top: 0; /* Encosta no topo */
+    left: 0; /* Encosta na esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background: rgba(0,0,0,0.9); /* Fundo preto quase opaco */
+    display: none; /* Começa escondido */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 9999; /* Fica acima de tudo */
+}
+
+.caixa-popup { /* Caixa que contém o vídeo */
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 800px; /* Limite máximo */
+    position: relative; /* Permite posicionamento do botão fechar */
+    border: 2px solid var(--cor-amarelo-cyber); /* Borda amarela */
+}
+
+.botao-fechar { /* Botão X de fechar */
+    position: absolute; /* Posicionamento relativo à caixa */
+    top: -40px; /* Fica acima da caixa */
+    right: 0; /* Alinhado à direita */
+    color: white; /* Cor branca */
+    font-size: 40px; /* Tamanho grande */
+    cursor: pointer; /* Cursor de clique */
+}
+
+.conteudo-video iframe { /* Estiliza o iframe do vídeo */
+    width: 100%; /* Ocupa largura total */
+    height: 450px; /* Altura fixa */
+    display: block; /* Remove espaços extras inline */
+}
+
+
+/* =========================================================
+   ELEMENTOS AUXILIARES
+   ========================================================= */
+
+.bb_img { /* Classe genérica para imagens */
+    max-width: 100%; /* Nunca ultrapassa o container */
+    height: auto; /* Mantém proporção original */
+}
+
+.bb_paragraph { /* Classe genérica para parágrafos */
+    min-height: .15em; /* Altura mínima */
+    line-height: 1.5em; /* Espaçamento entre linhas */
+    margin: 0.5em 0; /* Espaçamento vertical */
+}
+
+.video-background { /* Vídeo fixo de fundo */
+    position: fixed; /* Fica fixo na tela */
+    width: 80%; /* Largura base */
+    top: 0; /* Encosta no topo */
+    left: 0; /* Encosta na esquerda */
+    min-width: 100%; /* Garante cobertura total */
+    min-height: 100%; /* Garante cobertura total */
+    object-fit: cover; /* Preenche sem distorcer */
+    z-index: -1; /* Fica atrás do conteúdo */
+}
+
+/* FOOTER */ /* Indica o início da seção de estilos do rodapé */
+
+.separator { /* Classe usada como faixa separadora acima do footer */
+    background: #fcee0a; /* Define cor de fundo amarela (atalho shorthand) */
+    background-image: initial; /* Remove qualquer imagem de fundo herdada */
+    background-position-x: initial; /* Reseta posição horizontal da imagem de fundo */
+    background-position-y: initial; /* Reseta posição vertical da imagem de fundo */
+    background-size: initial; /* Reseta o tamanho da imagem de fundo */
+    background-repeat: initial; /* Reseta repetição da imagem de fundo */
+    background-attachment: initial; /* Reseta comportamento de rolagem da imagem */
+    background-origin: initial; /* Reseta origem da área de posicionamento do background */
+    background-clip: initial; /* Reseta área de recorte do background */
+    background-color: rgb(252, 238, 10); /* Define novamente a cor amarela em formato RGB */
+    padding: 26px 40px 23px; /* Define espaçamento interno (topo 26px, laterais 40px, baixo 23px) */
+    padding-top: 26px; /* Reforça padding superior */
+    padding-right: 40px; /* Reforça padding direito */
+    padding-bottom: 23px; /* Reforça padding inferior */
+    padding-left: 40px; /* Reforça padding esquerdo */
+}
+
+.footer { /* Classe principal do rodapé */
+    display: flex; /* Ativa Flexbox */
+    background: #000; /* Define fundo preto (shorthand) */
+    background-image: initial; /* Remove imagem de fundo herdada */
+    background-color: rgb(0, 0, 0); /* Define fundo preto em RGB */
+    padding-bottom: 28px; /* Espaçamento interno inferior */
+    position: relative; /* Permite posicionamento absoluto dentro dele */
+    align-items: center; /* Centraliza elementos no eixo vertical */
+    justify-content: center; /* Centraliza elementos no eixo horizontal */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    padding-top: 40px; /* Espaçamento interno superior */
+    margin-top: auto; /* Empurra o footer para o final da página quando usando flex no body */
+}
+
+.footer:before { /* Pseudo-elemento criado antes do conteúdo do footer */
+    background: url(/build/images/razor-bottom-black-4930e500.svg) repeat-x top; /* Define imagem repetida horizontalmente no topo */
+    content: ""; /* Necessário para pseudo-elemento aparecer */
+    height: 39px; /* Altura da faixa decorativa */
+    left: 0; /* Alinha à esquerda */
+    position: absolute; /* Posicionamento absoluto dentro do footer */
+    right: 0; /* Estende até a direita */
+    top: -39px; /* Posiciona acima do footer */
+    -webkit-transform: rotate(180deg); /* Rotaciona para compatibilidade com navegadores antigos */
+    transform: rotate(180deg); /* Rotaciona 180 graus */
+}
+
+@media screen and (max-width: 1440px) { /* Aplica regras para telas até 1440px */
+    .footer .content { /* Seleciona área de conteúdo do footer */
+        grid-template-columns: 1fr; /* Define apenas uma coluna (caso esteja usando grid em algum ponto) */
+        justify-items: center; /* Centraliza itens dentro do grid */
+    }
+}
+
+.footer .content { /* Área principal de conteúdo interno do footer */
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Permite quebrar linha se faltar espaço */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 24px; /* Espaçamento interno */
+    gap: 25px; /* Espaço entre os elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.footer .socials { /* Área dos ícones de redes sociais */
+    align-items: center; /* Centraliza verticalmente */
+    color: #cbcbcb; /* Define cor do texto cinza claro */
+    display: flex; /* Usa Flexbox */
+    font-family: BlenderProBold, sans-serif; /* Define fonte personalizada */
+    font-size: 18px; /* Tamanho do texto */
+    font-weight: 700; /* Texto em negrito */
+    text-transform: uppercase; /* Deixa texto em maiúsculo */
+}
+
+@media screen and (max-width: 1440px) { /* Para telas até 1440px */
+    .footer .links { /* Área de links */
+        flex-wrap: wrap; /* Permite quebrar linha */
+        justify-content: center; /* Centraliza os links */
+    }
+}
+
+@media screen and (max-width: 1440px) { /* Para telas até 1440px */
+    .footer .links, .footer hr { /* Seleciona links e linha horizontal */
+        grid-column-end: 2; /* Define final da coluna 2 no grid */
+    }
+}
+
+.footer .links { /* Área de links do footer */
+    display: flex; /* Usa Flexbox */
+    gap: 34px; /* Espaçamento entre links */
+    grid-column-end: 3; /* Finaliza na coluna 3 (caso grid esteja ativo) */
+    grid-column-start: 1; /* Inicia na coluna 1 */
+    justify-content: center; /* Centraliza links */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.footer .socials a { /* Links das redes sociais */
+    background-position: 50%; /* Centraliza imagem de fundo */
+    background-repeat: no-repeat; /* Impede repetição */
+    background-size: 100% 100%; /* Faz imagem ocupar totalmente o botão */
+    display: block; /* Permite definir largura e altura */
+    height: 40px; /* Altura do botão */
+    margin-left: 12px; /* Espaço à esquerda */
+    width: 40px; /* Largura do botão */
+}
+
+a { /* Todos os links do site */
+    background-color: initial; /* Remove qualquer cor de fundo herdada */
+}
+
+@media screen and (max-width: 900px) { /* Para telas menores que 900px */
+    .footer .partners { /* Área de parceiros */
+        flex-wrap: wrap; /* Permite quebra de linha */
+        justify-content: center; /* Centraliza */
+        align-items: center; /* Centraliza verticalmente */
+    }
+}
+
+.footer .partners { /* Área de logos de parceiros */
+    display: flex; /* Usa Flexbox */
+    gap: 32px; /* Espaçamento entre logos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.footer .copyright { /* Área de direitos autorais */
+    align-items: center; /* Centraliza verticalmente */
+    display: flex; /* Usa Flexbox */
+    gap: 40px; /* Espaçamento entre elementos */
+    text-align: center; /* Centraliza texto */
+    padding: 0px 20px 0px 20px; /* Espaçamento interno lateral */
+}
+
+.footer .projects { /* Área de projetos */
+    display: flex; /* Usa Flexbox */
+    gap: 25px; /* Espaço entre itens */
+    padding: 50px; /* Espaçamento interno */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}

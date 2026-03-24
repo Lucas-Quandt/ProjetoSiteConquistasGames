@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missões Resident Evil 4</title>
+    <link rel="stylesheet" href="styleRE4.css">
+    <link rel="stylesheet" href="styleRE4.2.css">
+</head>
+<body>
+       <header>
+        <div class="logoRE4">
+            <img src="IMG/logo.jpg" alt="resident evil 4 remake">
+        </div>
+
+        <div class="MNav">
+            <a href="index.html">RE4</a>
+            <a href="#btn-abrir" onclick="abrirPopup()"> Trailer</a>
+
+        </div>
+
+    </header> 
+
+<button class="btn-abrir" onclick="abrirPopup()">Abrir Popup</button>
+
+<div id="popup" class="popup-overlay">
+    <div class="popup-box">
+        <span class="fechar" onclick="fecharPopup()">×</span>
+
+         <div class="popup-content">
+            <iframe id="video-frame"
+                src=""
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+    <div class="proveai">
+        <img src="IMG/prove seu valor.png">
+    </div>
+
+
+
+
+    <section class="quadroDeMissoes">
+
+
+
+        <!-- ============================== DIÁRIAS ============================== -->
+        <div class="bloco">
+        <h2>Missões Diárias</h2>
+        <ul>
+        <li>
+        <strong>Contagem de Baixas</strong>
+        <span>Mate 100 inimigos em um único dia.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Sobrevivência Rápida</strong>
+        <span>Complete 1 capítulo sem morrer.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Especialista em Arma</strong>
+        <span>Use apenas a arma Bolt Thrower por 25 minutos.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Parry Diário</strong>
+        <span>Execute 10 parry perfeitos.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Sem Dano</strong>
+        <span>Complete um capítulo sem receber dano.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Missão de Tempo</strong>
+        <span>Complete todo o segmento da Vila (Capítulos 1-6) em tempo limitado. ( 01:30:00 horas)</span><span class="finalizado"></span>
+        </li>
+        </ul>
+        </div>
+
+        <!-- ============================== SEMANAIS ============================== -->
+        <div class="bloco">
+        <h2>Missões Semanais</h2>
+        <ul>
+        <li>
+        <strong>Caçador Implacável</strong>
+        <span>Mate 800 inimigos na semana.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Especialista em Parry</strong>
+        <span>Realize 50 parrys perfeitos no total.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Todas as Armas</strong>
+        <span>Utilize todas as classes de armas ao menos uma vez.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Tolerância Zero</strong>
+        <span>Complete 5 Capítulos sem morrer.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Precision Master</strong>
+        <span>Mantenha 70% ou mais de precisão em combate.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Sobrevivência Avançada</strong>
+        <span>Conclua 3 contratos do mercador no segmento do castelo sem sofrer dano durante o desafio.</span><span class="finalizado"></span>
+        </li>
+        </ul>
+        </div>
+
+
+        <!-- ============================== MENSAIS ============================== -->
+        <div class="bloco">
+        <h2>Missões Mensais</h2>
+        <ul>
+        <li>
+        <strong>Conquistador Mensal</strong>
+        <span>Complete todas as missões semanais do mês.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Assassino Letal</strong>
+        <span>Elimine mais de 2.000 inimigos no mês.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Colecionador de Armas</strong>
+        <span>Atualize 5 armas ao nível máximo em uma unica campanha.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Sobrevivente de Elite</strong>
+        <span>Complete o jogo sem falar com o mercador.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Especialista em Parry Avançado</strong>
+        <span>Realize 200 parrys perfeitos.</span><span class="finalizado"></span>
+        </li>
+        <li>
+        <strong>Herói da História</strong>
+        <span>Finalize o modo história na maior dificuldade sem morrer.</span><span class="finalizado"></span>
+        </li>
+        </ul>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+<footer id="footer-common">
+         
+        <section>
+      <ul class="footer-common__rating">
+
+                        <li class="esrb">
+          <a href="http://www.esrb.org/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/icon_esrb_portal_long.jpg" alt="">
+          </a>
+        </li>
+                                        <!--platform logo-->
+                                                <li class="Ps5">
+          <a href="http://www.playstation.com" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Ps5.png" alt="PlayStation®5">
+          </a>
+        </li>
+                                                                <li class="Ps4">
+          <a href="http://www.playstation.com" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Ps4.png" alt="PlayStation®4">
+          </a>
+        </li>
+                                                                <li class="Ps3">
+          <a href="http://www.playstation.com" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Ps3.png" alt="PlayStation®3">
+          </a>
+        </li>
+                                
+                        <li class="Psn">
+          <a href="http://www.playstation.com" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Psn.png" alt="PSN℠">
+          </a>
+        </li>
+                                                        <li class="Xboxseries">
+          <a href="http://www.xbox.com/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Xboxseries.png" alt="Xbox Series®">
+          </a>
+        </li>
+                                                                <li class="Xboxone">
+          <a href="http://www.xbox.com/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Xboxone.png" alt="Xbox One®">
+          </a>
+        </li>
+                                                                <li class="Xbox360">
+          <a href="http://www.xbox.com/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Xbox360.png" alt="Xbox 360®">
+          </a>
+        </li>
+                                
+                                                        <li class="Nsw">
+          <a href="http://www.nintendo.co.jp/hardware/switch/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Nsw.png" alt="Nintendo Switch™">
+          </a>
+        </li>
+                                
+                                                        <li class="Wiiu">
+          <a href="http://www.nintendo.co.jp/" target="_blank">
+            <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Wiiu.png" alt="Wii U™">
+          </a>
+        </li>
+                                
+                                                        <li class="Windows">
+          <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Windows.png" alt="Vapor">
+        </li>
+        <li class="Uwp">
+          <img src="https://game.capcom.com/residentevil/pc/img/common/footer/logo_Uwp.png" alt="Windows 10">
+        </li>
+      </ul>
+      <!--rating text-->
+      <ul class="footer-rating-text">
+        <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+          Não nos responsabilizamos, expressa ou implicitamente, por quaisquer problemas entre indivíduos ou grupos que utilizem este serviço. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">A publicação, visualização, envio e recebimento de dados são de responsabilidade exclusiva de cada usuário.
+        </font></font></li>
+        <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">“PlayStation Family Mark”, “PlayStation”, “logotipo do PS5” e “PS5” são marcas registradas ou marcas comerciais da Sony Interactive Entertainment Inc.</font></font></li>
+        <li>
+          <span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">"</font></font></span><span class="copyright_logo_ps"></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">"、"PlayStation"、"</font></font></span><span class="copyright_logo_ps3"></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">" e "</font></font></span><span class="copyright_logo_psn"></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">"São marcas registradas da Sony Interactive Entertainment Inc."</font></font></span><span class="copyright_logo_ps4"></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">" e "</font></font></span><span class="copyright_logo_psn_"></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">" </font></font></span><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">são marcas registradas da mesma empresa.</font></font></span>
+        </li>
+                <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Nintendo Switch™ e o logotipo do Nintendo Switch são marcas registradas da Nintendo.</font></font></li>
+        <li><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+          O logotipo do Steam é uma marca comercial e/ou marca registrada da Valve Corporation nos EUA e/ou em outros países. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+          Design da fonte por Fontworks Inc.
+        </font></font></li>
+      </ul>
+    </section>
+  
+  <div class="footer-common__copy">
+    <section class="common__copy__sns">
+      <div class="inner">
+        <dl class="sns">
+          <dt><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">CANAIS OFICIAIS</font></font></dt>
+          <dd>
+            <ul class="sns__flex">
+                            <li>
+                <ul>
+                  <li class="tw"><a href="https://x.com/REBHPortal/" target="_blank"><span class="text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Estamos publicando as informações mais recentes sobre marcas imobiliárias e diversos outros tópicos!</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Conta oficial da marca Resident Evil</font></font><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">@REBHPortal</font></font></span></a></li>
+                  <li class="tw"><a href="https://x.com/RE_Games" target="_blank"><span class="text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Estamos publicando as informações mais recentes sobre o jogo Resident Evil!</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Conta oficial do jogo Resident Evil</font></font><span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">@RE_Games</font></font></span></a></li>
+                </ul>
+              </li>
+
+              <li>
+                <ul>
+                  <li class="fb"><a href="https://www.facebook.com/residentevil/" target="_blank"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Facebook</font></font></a></li>
+                  <li class="yt"><a href="https://www.youtube.com/user/ResidentEvil" target="_blank"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">YouTube</font></font></a></li>
+                  <li class="ig"><a href="https://www.instagram.com/re_games/" target="_blank"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Instagram</font></font></a></li>
+                </ul>
+              </li>
+
+                          </ul>
+          </dd>
+        </dl>
+        
+        
+      </div>
+            <div id="footer-common__window">
+        <span id="aim"></span>
+        <span id="hole1" class="hole"></span>
+        <span id="hole2" class="hole"></span>
+        <span id="hole3" class="hole"></span>
+        <span id="hole4" class="hole"></span>
+        <span id="hole5" class="hole"></span>
+        <span id="hole6" class="hole"></span>
+      </div>
+    </section>
+
+    <section class="common__copy__link">
+
+      <div class="footer-common__copy-left">
+
+        <div class="footer-flex-box">
+            <p class="terms-of-service font-cw"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+              Termos de Uso:
+            </font></font></p>
+
+            <p class="terms">
+              <a href="https://game.capcom.com/residentevil/en/agreement-portalpage.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                Portal de Resident Evil
+              </font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+              /
+            </font></font></p>
+
+            <p class="terms">
+              <a href="https://game.capcom.com/residentevil/en/agreement-ambassadorpage.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                PROGRAMA DE EMBAIXADORES
+              </font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+              /
+            </font></font></p>
+
+            <p class="terms">
+              <a href="https://game.capcom.com/residentevil/en/agreement-page.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                RESIDENT EVIL.NET
+              </font></font></a>
+            </p>
+
+            <p class="terms pp font-cw">
+              <a href="https://c.cid.capcom.com/info/policy_ingame/privacy/"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                política de Privacidade
+              </font></font></a>
+            </p>
+
+            <p class="terms pp">
+              <a href="https://game.capcom.com/residentevil/en/cookie-policy.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                Política de Cookies              </font></font></a>
+            </p>
+
+            <p class="terms pp">
+              <a href="https://game.capcom.com/legal/font-license.html" target="_blank"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+                Licença da fonte              </font></font></a>
+            </p>
+
+          </div>
+      </div>
+
+      <div class="footer-common__copy-right">
+        <p class="nav-common__language">
+          <a href="https://game.capcom.com/residentevil/lang.html"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+            Inglês
+                      </font></font></a>
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="common__copy__right">
+    <div class="inner">
+      <p class="logo-capcom">
+        <img src="https://game.capcom.com/residentevil/pc/img/common/logo_capcom.png" alt="CAPCOM">
+      </p>
+      <p class="copy"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">©CAPCOM</font></font></p>
+    </div>
+  </div>
+
+  </footer>
+</body>
+</html>

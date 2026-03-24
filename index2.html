@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquest - Sistema de Conquistas</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logoSite-removebg-preview.png">
+
+</head>
+<body class="dark">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-content">
+            <div class="header-left">
+                <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </button>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="logo-text">Conquest</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div id="user-info" class="user-info" style="display: none;">
+                    <div class="user-badge">
+                        <i class="fas fa-user"></i>
+                        <span id="user-name"></span>
+                    </div>
+                    <button id="logout-btn" class="btn btn-danger">Sair</button>
+                </div>
+                <button id="login-btn" class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    Login
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Menu -->
+    <div id="side-menu" class="side-menu">
+        <div class="side-menu-content">
+            <div class="menu-header">
+                <span>Menu</span>
+                <button id="menu-close" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-label">Navegação</div>
+                <button class="menu-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </button>
+                <button class="menu-item" data-page="missions">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Missões</span>
+                </button>
+                <button class="menu-item" data-page="achievements">
+                    <i class="fas fa-trophy"></i>
+                    <span>Conquistas</span>
+                </button>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-label">Jogos</div>
+                <button class="menu-item game-item" id="re4" data-page="resident-evil" data-color="red">
+                    <div class="game-dot red"></div>
+                    <span>Resident Evil</span>
+                </button>
+                <button class="menu-item game-item" data-page="god-of-war" data-color="blue">
+                    <div class="game-dot blue"></div>
+                    <span>God of War</span>
+                </button>
+                <button class="menu-item game-item" data-page="cyberpunk-2077" data-color="cyber">
+                    <div class="game-dot cyber"></div>
+                    <span>Cyberpunk 2077</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Login</h2>
+                <button id="modal-close" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="login-form">
+                <div id="name-field" class="form-group" style="display: none;">
+                    <label>Nome</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name-input" placeholder="Seu nome">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email-input" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span id="submit-text">Entrar</span>
+                </button>
+            </form>
+            <div class="modal-footer">
+                <button id="toggle-auth" class="btn-link">
+                    Não tem conta? Cadastre-se
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Pages will be loaded here dynamically -->
+    </main>
+
+    <footer class="footer"> <!-- Início do rodapé da página -->
+
+
+        <div class="content"> <!-- Segundo container interno do footer -->
+
+            <div class="links"> <!-- Área de links institucionais -->
+                <a href="https://regulations.cdprojektred.com/privacy_policy">Termos de Uso &amp; Política de Privacidade</a> <!-- Link para política de privacidade -->
+                <a href="https://en.cdprojektred.com/jobs/">Carreiras</a> <!-- Link para página de empregos -->
+                <a href="https://regulations.cdprojektred.com/user_agreement">User agreement</a> <!-- Link para contrato de usuário -->
+                <a href="https://cdprojektred.com/fan-content">Fan Content Guidelines</a> <!-- Link para diretrizes de conteúdo -->
+                <a href="#cookie">Declaração de cookies</a> <!-- Link âncora interna -->
+                <a href="/pt-br/modding-support">REDmod</a>  <!-- Link para suporte de modding -->
+            </div>
+
+        </div>
+
+        <div class="content"> <!-- Terceiro container interno do footer -->
+
+            <div class="copyright"> <!-- Área de direitos autorais -->
+
+                <p>© 2026 Todos os direitos reservados.</p> <!-- Texto legal de direitos autorais -->
+            </div>
+        </div>
+
+    </footer> <!-- Fim do rodapé -->
+
+    <script src="app.js"></script>
+</body>
+</html>

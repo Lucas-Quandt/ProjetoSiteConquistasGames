@@ -1,0 +1,300 @@
+<!DOCTYPE html> <!-- Define o tipo do documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o padrão de caracteres (acentos, símbolos etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site ser responsivo em dispositivos móveis -->
+
+    <title>Cyberpunk 2077</title> <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="styleCP.css">
+    <!-- Conecta o arquivo CSS responsável pelo visual da página -->
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.cyberpunk.net/favicons/favicon-32x32.png">
+    <!-- Ícone que aparece na aba do navegador -->
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <!-- Logo central do topo -->
+        <div class="logo-central">
+            
+                <a href="/CYBERPUNK/indexCP.html"><img src="https://www.cyberpunk.net/build/images/home8/logo-franchise-yellow-en@1x-b4c9e65b.png"
+                alt="Logo Cyberpunk"></a>
+            <!-- Imagem da logo oficial -->
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="menu-navegacao" id="menu-navegacao">
+
+            <!-- Link para página inicial -->
+            <a href="../index2.html">Início</a>
+
+            <!-- Link que abre o popup do trailer -->
+            <a href="#" onclick="alternarPopup(true)">Trailer</a>
+
+            <!-- Link âncora que rola até a seção conquistas -->
+            <a href="#conquistas">Conquistas</a>
+
+            <!-- Link âncora que rola até a seção missões -->
+            <a href="#missoes">Missões</a>
+
+            <!-- Link para página sobre -->
+            <a href="./sobreCP.html">Sobre</a>
+
+        </nav>
+    </header>
+
+    <!-- ================= HERO (SEÇÃO PRINCIPAL) ================= -->
+    <main class="secao-hero">
+
+        <div class="conteudo-hero">
+
+            <!-- Vídeo de fundo -->
+            <video class="video-background" autoplay muted loop playsinline>
+                <source src="/CYBERPUNK/img/CP2077_UE_KV_Animation_1920x1080.webm" type="video/webm">
+                Seu navegador não suporta vídeos .webm.
+            </video>
+
+            <!-- Título principal -->
+            <h1 class="titulo-principal">
+                Aventure-se em Night City
+            </h1>
+
+            <!-- Texto descritivo -->
+            <p class="descricao-hero">
+                Uma história de ação e aventura em mundo aberto ambientada em Night City,
+                uma megalópole obcecada por poder, glamour e biomodificações.
+            </p>
+
+            <br> <!-- Quebra de linha -->
+
+            <!-- Botão que abre o trailer -->
+            <button class="botao-destaque" onclick="alternarPopup(true)">
+                Assistir Trailer
+            </button>
+
+        </div>
+    </main>
+
+    <!-- ================= SEÇÃO CONQUISTAS ================= -->
+    <section id="conquistas" class="secao-conteudo">
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-glitch">CONQUISTAS</h2>
+            <p class="subtitulo">Desafios completados por lendas.</p>
+        </div>
+
+        <!-- Container Grid -->
+        <div class="container-grid">
+
+            <!-- CARD 1 -->
+            <div class="card-cyber conquista">
+
+                <div class="card-imagem">
+                    <img src="./img/missao.jpg" alt="O Louco">
+                    <span class="tag-tipo">CONQUISTA</span>
+                </div>
+
+                <div class="card-info">
+                    <h3>O Louco</h3>
+                    <p>Torne-se um mercenário. Comece sua jornada em Night City.</p>
+
+                    <!-- Barra de progresso -->
+                    <div class="barra-progresso">
+                        <div class="preenchimento" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card-cyber conquista">
+
+                <div class="card-imagem">
+                    <img src="./img/johnny_silverhand.jpg" alt="Tirar o Fôlego">
+                    <span class="tag-tipo">CONQUISTA</span>
+                </div>
+
+                <div class="card-info">
+                    <h3>De Tirar o Fôlego</h3>
+                    <p>Colete todos os itens que pertenceram a Johnny Silverhand.</p>
+
+                    <div class="barra-progresso">
+                        <div class="preenchimento" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card-cyber conquista">
+
+                <div class="card-imagem">
+                    <img src="./img/cyberpunk.jpg" alt="O Mundo">
+                    <span class="tag-tipo">CONQUISTA</span>
+                </div>
+
+                <div class="card-info">
+                    <h3>O Mundo</h3>
+                    <p>Conclua a história principal.</p>
+
+                    <div class="barra-progresso">
+                        <div class="preenchimento" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SEÇÃO MISSÕES ================= -->
+    <section id="missoes" class="secao-conteudo fundo-alternado">
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-glitch" style="color: var(--cor-vermelho-neon)">
+                MISSÕES PRINCIPAIS
+            </h2>
+            <p class="subtitulo">Contratos disponíveis no Fixer.</p>
+        </div>
+
+        <div class="container-grid">
+
+            <!-- Card missão -->
+            <div class="card-cyber missao">
+
+                <div class="card-imagem">
+                    <img src="./img/konpeki_plaza.jpg" alt="O Roubo">
+                    <span class="tag-tipo">MISSÃO</span>
+                </div>
+
+                <div class="card-info">
+                    <h3>O Roubo</h3>
+                    <p>Infiltre-se no Konpeki Plaza e roube o biochip experimental.</p>
+                    <button class="btn-card">Aceitar Contrato</button>
+                </div>
+
+            </div>
+            <div class="card-cyber missao">
+                <div class="card-imagem">
+                    <img src="./img/takemura.jpg" alt="Ganhando Tempo">
+                    <span class="tag-tipo">MISSÃO</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ganhando Tempo</h3>
+                    <p>Sobreviva ao ataque e encontre Takemura antes que seja tarde.</p>
+                    <button class="btn-card">Aceitar Contrato</button>
+                </div>
+            </div>
+
+            <div class="card-cyber missao">
+                <div class="card-imagem">
+                    <img src="./img/hanako.jpg" alt="Nocturne">
+                    <span class="tag-tipo">MISSÃO</span>
+                </div>
+                <div class="card-info">
+                    <h3>Nocturne OP55N1</h3>
+                    <p>Encontre Hanako no Embers. Ponto sem retorno.</p>
+                    <button class="btn-card">Aceitar Contrato</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= POPUP DO TRAILER ================= -->
+    <div id="janela-popup" class="overlay-popup">
+
+        <div class="caixa-popup">
+
+            <!-- Botão fechar -->
+            <span class="botao-fechar" onclick="alternarPopup(false)">×</span>
+
+            <div class="conteudo-video">
+                <iframe id="iframe-video"
+                        src=""
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <br> <!-- Espaço antes do footer -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer"> <!-- Início do rodapé da página -->
+
+        <div class="content"> <!-- Container interno do footer -->
+
+            <div class="partners"> <!-- Área que exibe logos de parceiros -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/nvidia-5a0ab065.svg" alt=""> <!-- Logo da NVIDIA carregada de forma preguiçosa -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/alienware-3d98dd93.svg" alt=""> <!-- Logo da Alienware -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/amd-a823d277.svg" alt=""> <!-- Logo da AMD -->
+            </div>
+
+        </div>
+
+        <div class="content"> <!-- Segundo container interno do footer -->
+
+            <div class="links"> <!-- Área de links institucionais -->
+                <a href="https://regulations.cdprojektred.com/privacy_policy">Termos de Uso &amp; Política de Privacidade</a> <!-- Link para política de privacidade -->
+                <a href="https://en.cdprojektred.com/jobs/">Carreiras</a> <!-- Link para página de empregos -->
+                <a href="https://regulations.cdprojektred.com/user_agreement">User agreement</a> <!-- Link para contrato de usuário -->
+                <a href="https://cdprojektred.com/fan-content">Fan Content Guidelines</a> <!-- Link para diretrizes de conteúdo -->
+                <a href="#cookie">Declaração de cookies</a> <!-- Link âncora interna -->
+                <a href="/pt-br/modding-support">REDmod</a>  <!-- Link para suporte de modding -->
+            </div>
+
+        </div>
+
+        <div class="content"> <!-- Terceiro container interno do footer -->
+
+            <div class="copyright"> <!-- Área de direitos autorais -->
+
+                <a href="https://cdprojektred.com" target="_blank"> <!-- Link externo que abre em nova aba -->
+                    <img loading="lazy" src="https://www.cyberpunk.net/build/images/CDProjektRed-White-e4ac7847.svg" alt="CD Projekt Red"> <!-- Logo oficial da CD Projekt Red -->
+                </a>
+
+                <p>© 2025 CD PROJEKT S.A. Todos os direitos reservados. CD PROJEKT, o logotipo CD PROJEKT, Cyberpunk, Cyberpunk 2077 e o logotipo Cyberpunk 2077 são marcas comerciais e/ou marcas registradas da CD PROJEKT S.A. nos EUA e/ou em outros países.</p> <!-- Texto legal de direitos autorais -->
+
+                </div>
+                <br> <!-- Quebra de linha visual -->
+
+                <div class="projects"> <!-- Área de outros projetos da empresa -->
+
+                    <a href="http://thewitcher.com" target="_blank"> <!-- Link externo para The Witcher -->
+                        <img loading="lazy" src="https://www.cyberpunk.net/build/images/witcher-dbdb7666.png" alt="Witcher"> <!-- Logo do jogo The Witcher -->
+
+                    </a>
+                    <a href="https://www.playgwent.com" target="_blank"> <!-- Link externo para Gwent -->
+                        <img loading="lazy" src="https://www.cyberpunk.net/build/images/gwent-f7fcd4e6.png" alt="Gwent"> <!-- Logo do jogo Gwent -->
+
+                </a>
+            </div>
+        </div>
+
+    </footer> <!-- Fim do rodapé -->
+    <div id="janela-popup" class="overlay-popup"> <!-- Div principal do popup (overlay que cobre a tela) -->
+        <div class="caixa-popup"> <!-- Caixa central onde o conteúdo do popup aparece -->
+            <span class="botao-fechar" onclick="alternarPopup(false)">×</span> <!-- Botão "X" que chama função JS para fechar o popup -->
+            <div class="conteudo-video"> <!-- Container interno onde o vídeo será exibido -->
+                <iframe id="iframe-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <!-- Iframe que recebe dinamicamente o link do vídeo via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptCP.js"></script> <!-- Conecta o arquivo JavaScript externo responsável pelas interações -->
+
+    </footer>
+
+    <!-- Conecta o JavaScript -->
+    <script src="scriptCP.js"></script>
+
+</body>
+</html>

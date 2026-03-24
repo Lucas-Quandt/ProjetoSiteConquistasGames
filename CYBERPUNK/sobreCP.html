@@ -1,0 +1,149 @@
+<!DOCTYPE html> <!-- Define que o documento está usando HTML5 -->
+<html lang="pt-BR"> <!-- Início do HTML e define o idioma como Português do Brasil -->
+
+<head> <!-- Início da área de configurações invisíveis da página -->
+
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres (permite acentos corretamente) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz o site se adaptar a celulares e tablets -->
+    <title>Cyberpunk 2077</title> <!-- Título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="styleCP.css"> <!-- Conecta o arquivo CSS externo -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.cyberpunk.net/favicons/favicon-32x32.png"> <!-- Define o ícone da aba do navegador -->
+    
+</head> <!-- Fim da área head -->
+
+<body> <!-- Início do conteúdo visível da página -->
+
+    <header> <!-- Início do cabeçalho -->
+
+        <div class="logo-central"> <!-- Container da logo central -->
+            <a href="/CYBERPUNK/indexCP.html"><img src="https://www.cyberpunk.net/build/images/home8/logo-franchise-yellow-en@1x-b4c9e65b.png"
+                alt="Logo Cyberpunk"></a>
+        </div>
+
+        <nav class="menu-navegacao" id="menu-navegacao"> <!-- Menu de navegação principal -->
+            <a href="/CYBERPUNK/indexCP.html">Cyberpunk 2077</a> <!-- Link para a página principal -->
+            <a href="#" onclick="alternarPopup(true)">Trailer</a> <!-- Link que executa função JavaScript para abrir o popup -->
+
+        </nav>
+
+    </header> <!-- Fim do cabeçalho -->
+    <main class="secao-hero"> <!-- Início do conteúdo principal da página -->
+
+        <div> <!-- Container do texto principal -->
+            <h1 class="titulo-principal"> <!-- Título principal da seção -->
+               SOBRE O JOGO <!-- Texto exibido como título -->
+            </h1>
+            <p class="descricao-hero"> <!-- Parágrafo descritivo do jogo -->
+                Cyberpunk 2077 é um RPG de ação e aventura em mundo aberto que se passa em Night City, uma megalópole perigosa onde todos são obcecados por poder, glamour e alterações corporais. <!-- Texto explicativo sobre o jogo -->
+            </p>
+            <br> <!-- Quebra de linha -->
+            <button class="botao-destaque" onclick="alternarPopup(true)">Assistir Trailer</button> <!-- Botão que chama função JS para abrir o popup -->
+        </div>
+        <br> <!-- Quebra de linha -->
+
+        <p class="bb_paragraph"> <!-- Container geral que agrupa os vídeos -->
+
+            <span class="bb_img_ctn"> <!-- Container individual do primeiro vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/4719eddcc4434da05f0226f8564f68a4.poster.avif?t=1765554351" width="1000" height="370"> <!-- Vídeo com autoplay, mudo, em loop e imagem de capa -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/4719eddcc4434da05f0226f8564f68a4.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Fonte do vídeo em formato WebM -->
+                </video>
+            </span>
+
+            <span class="bb_img_ctn"> <!-- Container do segundo vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/3917d8ce7a57dc0a1d7245846ee87bbe.poster.avif?t=1765554351" width="1000" height="370"> <!-- Vídeo com configurações automáticas -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/bee28314117d263d1ca8f0b38c75f9e1.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Fonte do segundo vídeo -->
+                </video>
+            </span>
+
+            <span class="bb_img_ctn"> <!-- Container do terceiro vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/c851ccb251786e31dc8c288f9cce0199.poster.avif?t=1765554351" width="1000" height="370"> <!-- Configurações de reprodução automática -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/3917d8ce7a57dc0a1d7245846ee87bbe.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Fonte do vídeo -->
+                </video>
+            </span>
+
+            <span class="bb_img_ctn"> <!-- Container do quarto vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/7708e1f93550cffa78381aa939f6b062.poster.avif?t=1765554351" width="1000" height="370"> <!-- Vídeo com imagem de capa -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/c851ccb251786e31dc8c288f9cce0199.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Arquivo do vídeo -->
+                </video>
+            </span>
+
+            <span class="bb_img_ctn"> <!-- Container do quinto vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/4719eddcc4434da05f0226f8564f68a4.poster.avif?t=1765554351" width="1000" height="370"> <!-- Configuração de reprodução automática -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/7708e1f93550cffa78381aa939f6b062.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Fonte do vídeo -->
+                </video>
+            </span>
+
+            <span class="bb_img_ctn"> <!-- Container do sexto vídeo -->
+                <video class="bb_img" autoplay="" muted="" loop="" playsinline="" crossorigin="anonymous" poster="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/4719eddcc4434da05f0226f8564f68a4.poster.avif?t=1765554351" width="1000" height="370"> <!-- Vídeo com reprodução automática -->
+                    <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/extras/e2a07c1431cca0a9da3be5c3a0f218d4.webm?t=1765554351" type="video/webm; codecs=vp9"> <!-- Arquivo do vídeo -->
+                </video>
+            </span>
+
+        </p> <!-- Fim do container de vídeos -->
+        
+    </main> <!-- Fim do conteúdo principal -->
+    <footer class="footer"> <!-- Início do rodapé da página -->
+
+        <div class="content"> <!-- Container interno do footer -->
+
+            <div class="partners"> <!-- Área que exibe logos de parceiros -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/nvidia-5a0ab065.svg" alt=""> <!-- Logo da NVIDIA carregada de forma preguiçosa -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/alienware-3d98dd93.svg" alt=""> <!-- Logo da Alienware -->
+                <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/amd-a823d277.svg" alt=""> <!-- Logo da AMD -->
+            </div>
+
+        </div>
+
+        <div class="content"> <!-- Segundo container interno do footer -->
+
+            <div class="links"> <!-- Área de links institucionais -->
+                <a href="https://regulations.cdprojektred.com/privacy_policy">Termos de Uso &amp; Política de Privacidade</a> <!-- Link para política de privacidade -->
+                <a href="https://en.cdprojektred.com/jobs/">Carreiras</a> <!-- Link para página de empregos -->
+                <a href="https://regulations.cdprojektred.com/user_agreement">User agreement</a> <!-- Link para contrato de usuário -->
+                <a href="https://cdprojektred.com/fan-content">Fan Content Guidelines</a> <!-- Link para diretrizes de conteúdo -->
+                <a href="#cookie">Declaração de cookies</a> <!-- Link âncora interna -->
+                <a href="/pt-br/modding-support">REDmod</a>  <!-- Link para suporte de modding -->
+            </div>
+
+        </div>
+
+        <div class="content"> <!-- Terceiro container interno do footer -->
+
+            <div class="copyright"> <!-- Área de direitos autorais -->
+
+                <a href="https://cdprojektred.com" target="_blank"> <!-- Link externo que abre em nova aba -->
+                    <img loading="lazy" src="https://www.cyberpunk.net/build/images/CDProjektRed-White-e4ac7847.svg" alt="CD Projekt Red"> <!-- Logo oficial da CD Projekt Red -->
+                </a>
+
+                <p>© 2025 CD PROJEKT S.A. Todos os direitos reservados. CD PROJEKT, o logotipo CD PROJEKT, Cyberpunk, Cyberpunk 2077 e o logotipo Cyberpunk 2077 são marcas comerciais e/ou marcas registradas da CD PROJEKT S.A. nos EUA e/ou em outros países.</p> <!-- Texto legal de direitos autorais -->
+
+                </div>
+                <br> <!-- Quebra de linha visual -->
+
+                <div class="projects"> <!-- Área de outros projetos da empresa -->
+
+                    <a href="http://thewitcher.com" target="_blank"> <!-- Link externo para The Witcher -->
+                        <img loading="lazy" src="https://www.cyberpunk.net/build/images/witcher-dbdb7666.png" alt="Witcher"> <!-- Logo do jogo The Witcher -->
+
+                    </a>
+                    <a href="https://www.playgwent.com" target="_blank"> <!-- Link externo para Gwent -->
+                        <img loading="lazy" src="https://www.cyberpunk.net/build/images/gwent-f7fcd4e6.png" alt="Gwent"> <!-- Logo do jogo Gwent -->
+
+                </a>
+            </div>
+        </div>
+
+    </footer> <!-- Fim do rodapé -->
+    <div id="janela-popup" class="overlay-popup"> <!-- Div principal do popup (overlay que cobre a tela) -->
+        <div class="caixa-popup"> <!-- Caixa central onde o conteúdo do popup aparece -->
+            <span class="botao-fechar" onclick="alternarPopup(false)">×</span> <!-- Botão "X" que chama função JS para fechar o popup -->
+            <div class="conteudo-video"> <!-- Container interno onde o vídeo será exibido -->
+                <iframe id="iframe-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <!-- Iframe que recebe dinamicamente o link do vídeo via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptCP.js"></script> <!-- Conecta o arquivo JavaScript externo responsável pelas interações -->
+
+</body> <!-- Fim do corpo da página -->
+</html> <!-- Fim do documento HTML -->
